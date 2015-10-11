@@ -1,8 +1,10 @@
-# Path additions
-PATH=$PATH:~/bin:usr/local/bin
+#
+# ~/.bash_profile
+#
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-	. `brew --prefix`/etc/bash_completion
-fi
+echo -e "Loading configuration file ~/.bash_profile"
+
+export PATH="$PATH:~/opt:~/Dropbox/dev/util/scripts/tmux:~/Dropbox/dev/bin"
+
 source ~/.bash_aliases
 source ~/.bashrc

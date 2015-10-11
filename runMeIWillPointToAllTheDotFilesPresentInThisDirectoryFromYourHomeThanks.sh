@@ -1,3 +1,3 @@
-ln -sf ~/Dropbox/dotfiles/.[a-z]* ~/
-ln -sf ~/Dropbox/dotfiles ~/dotfiles
+ln -sf ~/dev/ws/dotfiles/.[a-z]* ~/
 rm -rf ~/.git
+rm -rf ~/.gitignore

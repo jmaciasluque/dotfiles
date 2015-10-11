@@ -1,3 +1,9 @@
+#
+# ~/.bashrc
+#
+
+echo -e "Loading configuration file ~/.bashrc"
+
 # Git Prompt section
 source ~/.git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="auto"
