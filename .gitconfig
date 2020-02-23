@@ -1,0 +1,14 @@
+[user]
+        name = Juan Macias
+        email = juan.macias.luque@gmail.com
+        editor = vim
+[merge]
+        tool = vimdiff
+[core]
+        editor = vim
+        autocrlf = input
+[filesystem "AdoptOpenJDK|1.8.0_232|/dev/disk1s1"]
+        timestampResolution = 1001 milliseconds
+        minRacyThreshold = 0 nanoseconds
+[push]
+        default = simple
