@@ -7,7 +7,7 @@ export AWS_PROFILE=masl
 export AWS_DEFAULT_REGION="eu-west-1"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jmacias/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -15,7 +15,7 @@ ZSH_THEME="random"
 
 plugins=(git brew aws bundler chucknorris common-aliases dircycle dirhistory docker encode64 httpie history jira lol mvn node npm osx redis-cli rand-quote sbt scala sudo ssh-agent terraform tmux urltools vagrant vi-mode)
 
-export PATH="/Users/jmacias/Dropbox/dev/util/scripts/tmux:/Users/jmacias/Dropbox/dev/bin:/usr/local/sbin:/usr/local/bin:/Users/jmacias/go/bin:$HOME/.local/bin:$HOME/.jenv/bin:$PATH"
+export PATH="~/Dropbox/dev/util/scripts/tmux:~/Dropbox/dev/bin:/usr/local/sbin:/usr/local/bin:~/go/bin:$HOME/.local/bin:$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -23,10 +23,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jmacias/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jmacias/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jmacias/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jmacias/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 chuck | cowsay | lolcat
 cal
