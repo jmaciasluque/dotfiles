@@ -48,4 +48,4 @@ source ~/.zsh_artifactory
 export WS=~/Dropbox/dev/ws
 export DWS=~/dpg/dws
 
-ssh-add -K ~/.ssh/id_rsa_jmaciasluque
+ssh-add -K ~/.ssh/id_rsa_jmaciasluque &> /dev/null
