@@ -1,6 +1,8 @@
 echo -e "Loading configuration file ~/.zshrc"
 
 export EDITOR="/usr/local/bin/vim"
+
+export AWS_PAGER=""
 export AWS_PROFILE=masl
 export AWS_DEFAULT_REGION="eu-west-1"
 
@@ -43,7 +45,7 @@ fi
 
 source ~/.zsh_artifactory
 
-export AWS_PAGER=""
-
 export WS=~/Dropbox/dev/ws
 export DWS=~/dpg/dws
+
+ssh-add -K ~/.ssh/id_rsa_jmaciasluque
