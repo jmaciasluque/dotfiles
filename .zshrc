@@ -1,51 +1,27 @@
 echo -e "Loading configuration file ~/.zshrc"
 
 export EDITOR="/usr/local/bin/vim"
-
-export AWS_PAGER=""
-export AWS_PROFILE=masl
-export AWS_DEFAULT_REGION="eu-west-1"
-
-# Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="random"
-
-plugins=(git brew aws bundler chucknorris common-aliases dircycle dirhistory docker encode64 httpie history jira lol mvn node npm osx redis-cli rand-quote sbt scala sudo ssh-agent terraform tmux urltools vagrant vi-mode)
-
-export PATH="~/Dropbox/dev/util/scripts/tmux:~/Dropbox/dev/bin:/usr/local/sbin:/usr/local/bin:~/go/bin:$HOME/.local/bin:$HOME/.jenv/bin:$PATH"
+export PATH="$DROPBOX_HOME/dev/util/scripts/tmux:$DROPBOX_HOME/dev/bin:/usr/local/sbin:/usr/local/bin:~/go/bin:$HOME/.local/bin:$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export JAVA_HOME=$(/usr/libexec/java_home)
+export WS=$DROPBOX_HOME/dev/ws
+export DWS=~/dpg/dws
 
+plugins=(git brew aws bundler chucknorris common-aliases dircycle dirhistory docker encode64 httpie history jira lol mvn node npm osx redis-cli rand-quote sbt scala sudo ssh-agent terraform tmux urltools vagrant vi-mode)
+ZSH_THEME="random"
+
+source ~/.zsh_private
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '~/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-chuck | cowsay | lolcat
-cal
-dws
-
 alias git='LANG=en_GB git'
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-SPACESHIP_BATTERY_SHOW=always
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-source ~/.zsh_artifactory
+chuck | cowsay | lolcat
+cal
+dws
 
-export WS=~/Dropbox/dev/ws
-export DWS=~/dpg/dws
-
-ssh-add -K ~/.ssh/id_rsa_jmaciasluque &> /dev/null
