@@ -4,6 +4,7 @@
         editor = vim
 [merge]
         tool = vimdiff
+        ff = false
 [core]
         editor = vim
         autocrlf = input
@@ -12,3 +13,6 @@
         minRacyThreshold = 0 nanoseconds
 [push]
         default = simple
+        ff = only
+[url "git@bitbucket.org:"]
+	    insteadOf = https://bitbucket.org/
